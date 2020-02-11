@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         SeekBar seekBar1;
         seekBar1 = findViewById(R.id.seekBar1);
         seekBar1.setOnSeekBarChangeListener(CC);
+
+        cV1.setOnTouchListener(CC);
 
 
 

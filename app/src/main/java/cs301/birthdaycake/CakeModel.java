@@ -8,6 +8,8 @@ public class CakeModel
     public int numCandles = 2;
     public boolean isFrosted = true;
     public boolean hasCandles = true;
+    public float xCord;
+    public float yCord;
 
 
 }
@@ -39,4 +41,3 @@ public int getHasCandles()
 }
 
 */
- 
