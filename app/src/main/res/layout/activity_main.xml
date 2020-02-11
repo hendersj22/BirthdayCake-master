@@ -41,22 +41,31 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/blowOutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOORAY!!" />
+            android:text="Blow Out" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/ButtonSwitch"
             android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:text="Frosting" />
+            android:checked="true"
+            android:text="Candles?" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="yay..." />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="5"
+            android:progress="2" />
 
     </LinearLayout>
 
