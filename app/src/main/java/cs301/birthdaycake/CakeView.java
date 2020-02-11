@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceView;
 import android.view.MotionEvent;
 
@@ -134,6 +135,13 @@ public class CakeView extends SurfaceView {
     @Override
     public void onDraw(Canvas canvas)
     {
+        Log.d("tag " , "msg");
+        Log.d( "tug" ,getModel().xCord + " , " + getModel().yCord );
+        frostingPaint.setTextSize(75);
+        frostingPaint.setColor(Color.RED);
+        canvas.drawText(getModel().xCord + " , " + getModel().yCord , 0 , 100, frostingPaint);
+        frostingPaint.setColor(Color.YELLOW);
+
         //top and bottom are used to keep a running tally as we progress down the cake layers
         float top = cakeTop;
         float bottom = cakeTop + frostHeight;

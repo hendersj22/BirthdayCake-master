@@ -13,17 +13,13 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
-    int mainX;
-    int mainY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
-        final CakeView cV1;
+        CakeView cV1;
 
         CompoundButton cb;
 
@@ -42,13 +38,10 @@ public class MainActivity extends AppCompatActivity {
         seekBar1 = findViewById(R.id.seekBar1);
         seekBar1.setOnSeekBarChangeListener(CC);
 
-        //findViewById().setOnTouchListener();
-
         cV1.setOnTouchListener(CC);
 
 
 
 
     }
-
 }
