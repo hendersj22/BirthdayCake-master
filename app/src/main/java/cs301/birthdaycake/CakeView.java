@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
+import android.view.MotionEvent;
 
 public class CakeView extends SurfaceView {
 
@@ -16,6 +17,8 @@ public class CakeView extends SurfaceView {
     Paint outerFlamePaint = new Paint();
     Paint innerFlamePaint = new Paint();
     Paint wickPaint = new Paint();
+    Paint balloonPaint = new Paint();
+
 
     /* These constants define the dimensions of the cake.  While defining constants for things
         like this is good practice, we could be calculating these better by detecting
@@ -60,6 +63,9 @@ public class CakeView extends SurfaceView {
         innerFlamePaint.setStyle(Paint.Style.FILL);
         wickPaint.setColor(Color.BLACK);
         wickPaint.setStyle(Paint.Style.FILL);
+        balloonPaint.setColor(Color.BLUE);
+        balloonPaint.setStyle(Paint.Style.FILL);
+
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
@@ -111,6 +117,13 @@ public class CakeView extends SurfaceView {
 
     }
 
+    public void drawBalloon(Canvas c, float x, float y){
+
+        c.drawOval(x-20,y+30,x+20,y-30, balloonPaint);
+        c.drawLine(x, y, x, y+100, balloonPaint);
+    }
+
+
     /**
      * onDraw is like "paint" in a regular Java program.  While a Canvas is
      * conceptually similar to a Graphics in javax.swing, the implementation has
@@ -149,6 +162,7 @@ public class CakeView extends SurfaceView {
             drawCandle(canvas, cakeLeft + cakeWidth*(candles +1 )/ (6) - candleWidth*(candles + 1) / (6), cakeTop);
 
         }
+        drawBalloon(canvas, cake1.x, cake1.y);
 
     }//onDraw
 
