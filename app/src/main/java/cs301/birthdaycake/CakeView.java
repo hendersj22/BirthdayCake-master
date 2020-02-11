@@ -170,7 +170,7 @@ public class CakeView extends SurfaceView {
             drawCandle(canvas, cakeLeft + cakeWidth*(candles +1 )/ (6) - candleWidth*(candles + 1) / (6), cakeTop);
 
         }
-        drawBalloon(canvas, cake1.x, cake1.y);
+        drawBalloon(canvas, cake1.xCord, cake1.yCord);
 
     }//onDraw
 
